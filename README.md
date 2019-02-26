@@ -7,11 +7,11 @@
 * applications will be saved into `storage` directory
 * force a garbage collection with: `iex> :erlang.garbage_collect()`
 * load the applications in memory with `iex> bb = Applications.load()`
-* you can play with the bb map
-  * first_app_id = bb |> Map.Keys |> hd()
-  * first_app = Map.get(bb, first_app_id)
-  * first_text_id = first_app |> Map.keys() |> hd()
-  * Map.get(first_app, first_text_id)
+* now you can play with the bb map
+  * `iex> first_app_id = bb |> Map.keys() |> hd()`
+  * `iex> first_app = Map.get(bb, first_app_id)`
+  * `iex> first_text_id = first_app |> Map.keys() |> hd()`
+  * `iex> Map.get(first_app, first_text_id)`
 
 The biggest map has 10_000 keys with text (100 x 100). If we pass the text to a word processor we're talking of 4.000 pages of text without white lines.
 
