@@ -2,7 +2,7 @@ defmodule ApplicationsTest do
   use ExUnit.Case
   doctest Applications
 
-  test "greets the world" do
+  test "create files into storage" do
     assert Applications.hello() == :world
   end
 end

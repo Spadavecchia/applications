@@ -22,7 +22,7 @@ defmodule Applications.MixProject do
   defp deps do
     [
       {:credo, "~> 1.0", only: [:dev, :test], runtime: false},
-      {:faker, "~> 0.12", only: :test}
+      {:faker, "~> 0.12"}
     ]
   end
 end
