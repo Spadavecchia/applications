@@ -1,13 +1,14 @@
 # Applications
 
+* Install dependencies: `mix deps.get`
 * Start a new iex session `iex -S mix`
-* start the observer to view the memory use: `:observer.start`
-* generate 100 **applications** using: `iex> Applications.create(100, 20, 20)`
+* Start the observer to view the memory use: `iex> :observer.start`
+* Generate 100 **applications** using: `iex> Applications.create(100, 20, 20)`
 * or you can measure the performance using: `iex> :timer.tc(Applications, :create, [100, 100, 100])` (100, 100, 100 is the limit) and can last until 10 minutes in be created
-* applications will be saved into `storage` directory
-* force a garbage collection with: `iex> :erlang.garbage_collect()`
-* load the applications in memory with `iex> bb = Applications.load()`
-* now you can play with the bb map
+* Applications will be saved into `storage` directory
+* Force a garbage collection with: `iex> :erlang.garbage_collect()`
+* Load the applications in memory with `iex> bb = Applications.load()`
+* Now you can play with the bb map
   * `iex> first_app_id = bb |> Map.keys() |> hd()`
   * `iex> first_app = Map.get(bb, first_app_id)`
   * `iex> first_text_id = first_app |> Map.keys() |> hd()`
